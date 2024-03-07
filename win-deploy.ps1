@@ -20,7 +20,7 @@ reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudExperie
 # Enable Win32 long paths
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
 # Add copy as path context menu entry
-reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v @ /t REG_SZ /d "Copy &as path" /f
+reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v '@' /t REG_SZ /d "Copy &as path" /f
 reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v Icon /t REG_SZ /d "imageres.dll,-5302" /f
 reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v InvokeCommandOnSelection /t REG_DWORD /d 1 /f
 reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v VerbHandler /t REG_SZ /d "{f3d06e7c-1e45-4a26-847e-f9fcdee59be0}" /f
