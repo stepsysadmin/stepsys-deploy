@@ -4,7 +4,8 @@
 # Fix Windows Store
 wsreset -i
 # Run Asheroto's WinGet fixer script
-irm https://github.com/asheroto/winget-install/releases/latest/download/winget-install.ps1 | iex
+$Command = "irm https://github.com/asheroto/winget-install/releases/latest/download/winget-install.ps1 | iex"
+Invoke-Expression $Command
 #### Apply registry tweaks that I deem essential
 ### Customization
 # Verbose logon messages
