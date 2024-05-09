@@ -19,21 +19,8 @@ reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudExperie
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudExperienceHost\Intent\OffDeviceConsent /v accepted /t REG_DWORD /d 1 /f
 # Enable Win32 long paths
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
-# Add copy as path context menu entry
-reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v '@' /t REG_SZ /d "Copy &as path" /f
-reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v Icon /t REG_SZ /d "imageres.dll,-5302" /f
-reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v InvokeCommandOnSelection /t REG_DWORD /d 1 /f
-reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v VerbHandler /t REG_SZ /d "{f3d06e7c-1e45-4a26-847e-f9fcdee59be0}" /f
-reg add HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath /v VerbName /t REG_SZ /d "copyaspath" /f
 # Show file extensions by default on
-reg add HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Windows.ShowFileExtensions /v CommandStateSync /t REG_SZ /d "" /f
-reg add HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Windows.ShowFileExtensions /v Description /t REG_SZ /d "@shell32.dll,-37571" /f
-reg add HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Windows.ShowFileExtensions /v ExplorerCommandHandler /t REG_SZ /d "{4ac6c205-2853-4bf5-b47c-919a42a48a16}" /f
-reg add HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Windows.ShowFileExtensions /v MUIVerb /t REG_SZ /d "@shell32.dll,-37570" /f
-reg add HKEY_CLASSES_ROOT\Directory\Background\shell\Windows.ShowFileExtensions /v CommandStateSync /t REG_SZ /d "" /f
-reg add HKEY_CLASSES_ROOT\Directory\Background\shell\Windows.ShowFileExtensions /v Description /t REG_SZ /d "@shell32.dll,-37571" /f
-reg add HKEY_CLASSES_ROOT\Directory\Background\shell\Windows.ShowFileExtensions /v ExplorerCommandHandler /t REG_SZ /d "{4ac6c205-2853-4bf5-b47c-919a42a48a16}" /f
-reg add HKEY_CLASSES_ROOT\Directory\Background\shell\Windows.ShowFileExtensions /v MUIVerb /t REG_SZ /d "@shell32.dll,-37570" /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
 ### Performance
 # Disable Hardware accelerated GPU scheduling because it causes stutters when watching YouTube and playing ETS2 simultaneously
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers /v HwSchMode /t REG_DWORD /d 1 /f
@@ -75,5 +62,5 @@ Set-MpPreference -SubmitSamplesConsent NeverSend​
 #######
 ### Install Tools and useful stuff using WinGet
 ## Currently includes the following applications:
-## 7-zip, Audacity, BCUninstaller, CPU-Z, Discord, Everything, FFmpeg, IrfanView, OneDrive, VSCode, NAPS2, GPU-Z, Windows Terminal, VLC, WizTree
-winget install -e --id 7zip.7zip;winget install -e --id Audacity.Audacity;winget install -e --id Klocman.BulkCrapUninstaller;winget install -e --id CPUID.CPU-Z;winget install -e --id Discord.Discord;winget install -e --id voidtools.Everything;winget install -e --id Gyan.FFmpeg;winget install -e --id IrfanSkiljan.IrfanView;winget install -e --id Microsoft.OneDrive;winget install -e --id Microsoft.VisualStudioCode;winget install -e --id Cyanfish.NAPS2;winget install -e --id TechPowerUp.GPU-Z;winget install -e --id Microsoft.WindowsTerminal;winget install -e --id VideoLAN.VLC;winget install -e --id AntibodySoftware.WizTree
+## 7-zip, Audacity, BCUninstaller, CPU-Z, Discord, Everything, FFmpeg, nomacs, OneDrive, VSCode, NAPS2, GPU-Z, Windows Terminal, VLC, WizTree, yt-dlp
+winget install -e --id 7zip.7zip;winget install -e --id Audacity.Audacity;winget install -e --id Klocman.BulkCrapUninstaller;winget install -e --id CPUID.CPU-Z;winget install -e --id Discord.Discord;winget install -e --id voidtools.Everything;winget install -e --id Gyan.FFmpeg;winget install -e --id Microsoft.OneDrive;winget install -e --id Microsoft.VisualStudioCode;winget install -e --id Cyanfish.NAPS2;winget install -e --id TechPowerUp.GPU-Z;winget install -e --id Microsoft.WindowsTerminal;winget install -e --id VideoLAN.VLC;winget install -e --id AntibodySoftware.WizTree;winget install -e --id Mozilla.Firefox;winget install -e --id nomacs.nomacs;winget install -e --id yt-dlp.yt-dlp
