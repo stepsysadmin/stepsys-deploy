@@ -65,3 +65,6 @@ Set-MpPreference -SubmitSamplesConsent NeverSend​
 ## Currently includes the following applications:
 ## 7-zip, Audacity, BCUninstaller, CPU-Z, Discord, Everything, FFmpeg, nomacs, OneDrive, VSCode, NAPS2, GPU-Z, Windows Terminal, VLC, WizTree, yt-dlp
 winget install -e --id 7zip.7zip;winget install -e --id Audacity.Audacity;winget install -e --id Klocman.BulkCrapUninstaller;winget install -e --id CPUID.CPU-Z;winget install -e --id Discord.Discord;winget install -e --id voidtools.Everything;winget install -e --id Gyan.FFmpeg;winget install -e --id Microsoft.OneDrive;winget install -e --id Microsoft.VisualStudioCode;winget install -e --id Cyanfish.NAPS2;winget install -e --id TechPowerUp.GPU-Z;winget install -e --id Microsoft.WindowsTerminal;winget install -e --id VideoLAN.VLC;winget install -e --id AntibodySoftware.WizTree;winget install -e --id Mozilla.Firefox;winget install -e --id nomacs.nomacs;winget install -e --id yt-dlp.yt-dlp
+# PowerToys Run Plugins
+winget install lin-ycv.EverythingPowerToys
+winget install advaith.CurrencyConverterPowerToys
